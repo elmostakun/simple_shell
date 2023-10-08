@@ -14,16 +14,13 @@ int main(int argc, char *argv[])
 	stats = 0;
 
 	(void)argc;
+
 	while (run_prompt)
 	{
 		prompt();
-
 		getln(&ln);
-
 		cmd = str_to_arr(ln, ' ');
-
 		stats = exe_cmd();
-
 		free(ln);
 		freeArr(cmd);
 	}

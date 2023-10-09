@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
 	first_cmd = argv[0];
 	run_prompt = 0;
-	stats = 0;
+	stat_s = 0;
 
 	(void)argc;
 
@@ -25,5 +25,5 @@ int main(int argc, char *argv[])
 		freeArr(cmd);
 	}
 
-	return (stats);
+	return (stat_s);
 }

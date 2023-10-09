@@ -11,6 +11,7 @@
 /*User defined functions*/
 int prompt(void);
 int _atoi(const char *s);
+int builtin(void);
 ssize_t take_line(char **ln);
 char *_cat(char *path, char *stpth);
 char *_cpy(char *path, char *stpth);

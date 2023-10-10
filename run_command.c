@@ -1,0 +1,48 @@
+#include "shell.h"
+
+/**
+ * run_command - function to run a command
+ *
+ * Return: the status of the command
+ */
+
+int run_command(void)
+{
+char *path_cmd;
+pid_t xpid;
+int ex_stat;
+
+
+if (cmd[0] && builtin())
+{
+path_cmd = /*findpath();*/
+if (path_cmd)
+{
+xpid = fork();
+if (xpid == -1)
+return (0);
+
+else if (xpid == 0)
+{
+execve(path_cmd, cmd, environ);
+perror("execve");
+exit(EXIT_FAILURE);
+}
+else
+{
+waitpid(xpid, &ex_stat, 0);
+if (WIFEXITED(ex_stat))
+status = WEXITSTATUS(ex_stat);
+}
+}
+else
+{
+f_fprintf(2, "%a: %b: %c: not found\n", first_cmd, run_prompt, cmd[0]);
+return (127);
+}
+free(path_cmd);
+}
+
+return (stat_s);
+}
+ 

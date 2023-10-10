@@ -6,6 +6,7 @@
  *
  * Return: the integer
  */
+
 int _atoi(const char *s)
 {
 	int res = 0;

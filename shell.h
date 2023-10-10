@@ -10,8 +10,10 @@
 
 /*User defined functions*/
 int prompt(void);
+int exitstat(char *exitsta);
 int _atoi(const char *s);
 int builtin(void);
+void freeArr(char **array);
 ssize_t take_line(char **ln);
 char *_cat(char *path, char *stpth);
 char *_cpy(char *path, char *stpth);
@@ -25,5 +27,6 @@ char *ln;
 int run_prompt;
 char *first_cmd;
 int stat_s;
+extern char **environ;
 
 #endif /*SHELL_H*/

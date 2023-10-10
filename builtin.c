@@ -1,23 +1,24 @@
 #include "shell.h"
 
 /**
- * handle_builtin - Handles builtin commands like exit, env, e.t.c
+ * builtin - builtin cmd program
  *
  * Return: 0 for success, else status
  */
+
 int builtin(void)
 {
-	if (!command[0])
+	if (!cmd[0])
 		return (0);
-	if (!_strcmp(command[0], "exit"))
+	if (!_compare(cmd[0], "exit"))
 	{
-		status = exit_stat(command[1]);
+		stat_s = exitstat(cmd[1]);
 		return (0);
 	}
 
-	if (!_strcmp(command[0], "env"))
+	if (!_compare(cmd[0], "env"))
 	{
-		printarray(environ);
+		put_array(environ);
 		return (0);
 	}
 

@@ -20,7 +20,8 @@ char *_cpy(char *path, char *stpth);
 char *_dup(char *string);
 int _compare(char *string1, char *string2);
 int _leng(char *string);
-
+void *call_loc(unsigned int numarr, unsigned int si_by);
+char *envir_get(char *check);
 /*Global variables used*/
 char **cmd;
 char *ln;

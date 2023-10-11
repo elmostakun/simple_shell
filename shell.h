@@ -9,7 +9,6 @@
 #include <errno.h>
 
 /*User defined functions*/
-char *_get_env(char *param);
 int prompt(void);
 char *find_path(void);
 int exitstat(char *exitsta);

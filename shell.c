@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	{
 		prompt();
 		getln(&ln);
-		cmd = str_to_arr(ln, ' ');
+		cmd = conv_strarr(ln, ' ');
 		stats = exe_cmd();
 		free(ln);
 		freeArr(cmd);

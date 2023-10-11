@@ -9,7 +9,9 @@
 #include <errno.h>
 
 /*User defined functions*/
+char *_get_env(char *param);
 int prompt(void);
+char *find_path(void);
 int exitstat(char *exitsta);
 int _atoi(const char *s);
 int builtin(void);
@@ -23,6 +25,7 @@ int _leng(char *string);
 void *call_loc(unsigned int numarr, unsigned int si_by);
 char *envir_get(char *check);
 int run_command(void);
+
 /*Global variables used*/
 char **cmd;
 char *ln;

@@ -15,7 +15,7 @@ int ex_stat;
 
 if (cmd[0] && builtin())
 {
-path_cmd = /*findpath();*/
+path_cmd = findpath();
 if (path_cmd)
 {
 xpid = fork();

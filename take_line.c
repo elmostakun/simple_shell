@@ -8,7 +8,7 @@
  */
 ssize_t take_line(char **ln)
 {
-char *bff = call_loc(9126, sizeof(char));
+char *bff = call_loc(8096, sizeof(char));
 ssize_t idx = 0;
 
 

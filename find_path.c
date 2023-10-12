@@ -14,7 +14,7 @@ char *find_path(void)
 	if (cmp_str(cmd[0], "./", 2) == 0 || cmd[0][0] == '/' || cmp_str(cmd[0], "../", 3))
 	{
 		if (access(cmd[0], F_OK) == 0)
-		return (_dup(cmd[0]));
+			return (_dup(cmd[0]));
 	}
 
 	if (!_path_v)

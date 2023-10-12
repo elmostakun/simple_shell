@@ -22,7 +22,7 @@ int _atoi(const char *s)
 	{
 		if (s[k] < '0' || s[k] > '9')
 			return (-2);
-		result = res * 10 + (s[k] - '0');
+		res = res * 10 + (s[k] - '0');
 		k++;
 	}
 	return (zign * res);

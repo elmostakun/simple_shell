@@ -15,7 +15,7 @@ int f_fputchar(int filedes, char cc)
 /**
  * f_fputstr - User defiend fputs function
  * @filedes: parameter for a file descriptor
- * @str: str to print
+ * @s: string to print
  *
  * Return: count of characters printed less one
  */
@@ -49,7 +49,7 @@ int f_fputint(int filedes, int numba)
 		l += f_fputchar(filedes, '0');
 		return (l);
 	}
-	if (numba == _INT_MIN)
+	if (numba == _MIN)
 	{
 		l += f_fputstr(filedes, "-2147483648");
 		return (l);
@@ -61,7 +61,7 @@ int f_fputint(int filedes, int numba)
 	}
 
 	v = numba % 10;
-	numb = numba / 10;
+	numba = numba / 10;
 	if (numba)
 		l += f_fputint(filedes, numba);
 	l += f_fputchar(filedes, v + '0');
@@ -96,7 +96,7 @@ int f_fprintf(int filedes, const char *fomat, char *str1, int nn1, char *str2)
 				lent += f_fputstr(filedes, str1);
 			else if (fomat[in] == 'b')
 				lent += f_fputint(filedes, nn1);
-			else if (fomat[i] == 'c')
+			else if (fomat[in] == 'c')
 				lent += f_fputstr(filedes, str2);
 		}
 		in++;

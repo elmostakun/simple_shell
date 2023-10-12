@@ -8,7 +8,7 @@
  */
 ssize_t take_line(char **ln)
 {
-char *bff = _calloc(12144, sizeof(char));
+char *bff = call_loc(12144, sizeof(char));
 ssize_t idx = 0;
 
 
@@ -34,7 +34,7 @@ return (-1);
 else
 {
 if (isatty(0))
-_printssf(1, "\n", "nill", 0, "nill");
+f_fprintf(1, "\n", "nill", 0, "nill");
 free(bff);
 exit(stat_s);
 }

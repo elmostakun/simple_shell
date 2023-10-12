@@ -15,12 +15,12 @@ int main(int argc, char *argv[])
 
 	(void)argc;
 
-	while (run_prompt)
+	while (++run_prompt)
 	{
 		prompt();
-		getln(&ln);
+		take_line(&ln);
 		cmd = conv_strarr(ln, ' ');
-		stats = exe_cmd();
+		stat_s = run_command();
 		free(ln);
 		freeArr(cmd);
 	}

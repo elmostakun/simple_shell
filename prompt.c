@@ -9,7 +9,7 @@
 int prompt(void)
 {
 	if (isatty(0))
-		_fputstr(1, "#cisfun$ ");
+		f_fputstr(1, "#cisfun$ ");
 
 	return (0);
 }

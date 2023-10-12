@@ -8,24 +8,24 @@
 char *find_path(void)
 {
 	int ind = 0;
-	char *_path_v = _get_env("PATH");
+	char *_path_v = envir_get("PATH");
 	char **_path_d, *_ab_path;
 
-	if (_compare(cmd[0], "./", 2) == 0 || cmd[0][0] == '/' || _compare(cmd[0], "../", 3))
+	if (cmp_str(cmd[0], "./", 2) == 0 || cmd[0][0] == '/' || cmp_str(cmd[0], "../", 3))
 	{
 		if (access(cmd[0], F_OK) == 0)
-			return _dup(cmd[0]);
+		return _dup(cmd[0]);
 	}
 
 	if (!_path_v)
 		return (NULL);
 
-	_path_d = str_to_arr(_path_v, ':');
+	_path_d = conv_strarr(_path_v, ':');
 
 	for (ind = 0; _path_d[ind]; ind++)
 	{
 		_ab_path = malloc(1024);
-		_cpy(_ab_path, _path_d[i]);
+		_cpy(_ab_path, _path_d[ind]);
 		_cat(_ab_path, "/");
 		_cat(_ab_path, cmd[0]);
 

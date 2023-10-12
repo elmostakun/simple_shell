@@ -19,7 +19,7 @@ for (; idx < leng_str + 1; idx++)
 {
 if (string[idx] != str_brk && string[idx] != '\0')
 {
-bfd[idx2] = string[idx];
+bff[idx2] = string[idx];
 idx2++;
 }
 else

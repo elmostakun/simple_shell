@@ -19,7 +19,7 @@ arrlloc = malloc(numarr * si_by);
 if (!arrlloc)
 return (NULL);
 
-for (idx = 0; idx < (nmemb * si_by); idx)
+for (idx = 0; idx < (numarr * si_by); idx++)
 ((char *) (arrlloc))[idx] = 0;
 
 return (arrlloc);

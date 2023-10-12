@@ -14,7 +14,7 @@ char *val = NULL;
 
 for (idx = 0; environ[idx]; idx++)
 {
-if (!_compare(environ[idx], check, stringlen) && environ[idx][stringlen] == '=')
+if (!cmp_str(environ[idx], check, stringlen) && environ[idx][stringlen] == '=')
 {
 val = environ[idx] + _leng(check) + 1;
 return (val);

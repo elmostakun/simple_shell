@@ -3,7 +3,7 @@
 /**
  * builtin - builtin cmd program
  *
- * Return: 0 for success, else status
+ * Return: returns 0 on success
  */
 
 int builtin(void)
@@ -18,7 +18,7 @@ int builtin(void)
 
 	if (!_compare(cmd[0], "env"))
 	{
-		put_array(environ);
+		putarray(environ);
 		return (0);
 	}
 

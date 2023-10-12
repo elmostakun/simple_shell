@@ -15,7 +15,7 @@ int ex_stat;
 
 if (cmd[0] && builtin())
 {
-path_cmd = findpath();
+path_cmd = find_path();
 if (path_cmd)
 {
 xpid = fork();
@@ -32,7 +32,7 @@ else
 {
 waitpid(xpid, &ex_stat, 0);
 if (WIFEXITED(ex_stat))
-status = WEXITSTATUS(ex_stat);
+stat_s = WEXITSTATUS(ex_stat);
 }
 }
 else

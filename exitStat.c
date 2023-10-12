@@ -11,7 +11,7 @@ int exitstat(char *exitsta)
 {
 	if (!exitsta)
 	{
-		free(line);
+		free(ln);
 		freeArr(cmd);
 		exit(stat_s);
 	}
@@ -20,7 +20,7 @@ int exitstat(char *exitsta)
 
 	if (stat_s >= 0)
 	{
-		free(line);
+		free(ln);
 		freeArr(cmd);
 		exit(stat_s);
 	}

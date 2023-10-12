@@ -1,8 +1,8 @@
 #include "shell.h"
 
-/** 
- * _cat - concatinates two strings 
- * @path: Destination of the string to be appended 
+/**
+ * _cat - concatinates two strings
+ * @path: Destination of the string to be appended
  * @stpth: String appended to path
  * Return: pointer
  */
@@ -22,10 +22,10 @@ return (path);
 }
 
 
-/** 
+/**
  * _cpy - copies the string
- * @path: destination of the copied string 
- * @stpth: source of the string to be copied to <path> 
+ * @path: destination of the copied string
+ * @stpth: source of the string to be copied to <path>
  * Return: pointer
  */
 
@@ -40,14 +40,14 @@ return (path);
 }
 
 
-/** 
- * _dup - allocates memory for a string duplicate 
+/**
+ * _dup - allocates memory for a string duplicate
  * @str: string
  * Return: memory
  */
 char *_dup(char *string)
 {
-char *pointer_mem *pointer_mem_char;
+char *pointer_mem, *pointer_mem_char;
 size_t length;
 
 if (!string)
@@ -72,8 +72,8 @@ pointer_mem_char++;
 return (pointer_mem);
 }
 
-/** 
- * _compare - compares the strings 
+/**
+ * _compare - compares the strings
  * @string1: string number ome
  * @string2: string number 2
  * Return: the condition of the string
@@ -84,16 +84,16 @@ int idx = 0;
 
 for (; string1[idx] != '\0' || string2[idx] != '\0'; idx++)
 {
-if (string[idx] != string2[idx])
+if (string1[idx] != string2[idx])
 return (string1[idx] - string2[idx]);
 }
 return (0);
 }
 
-/** 
- * _leng - returns the length of a string 
- * @string count the length 
- * Return: length. 
+/**
+ * _leng - returns the length of a string
+ * @string count the length
+ * Return: length.
  */
 
 int _leng(char *string)
@@ -105,5 +105,5 @@ while (*string != '\0')
 string++;
 leng++;
 }
-return (leng); 
+return (leng);
 }

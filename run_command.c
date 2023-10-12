@@ -12,7 +12,6 @@ char *path_cmd;
 pid_t xpid;
 int ex_stat;
 
-
 if (cmd[0] && builtin())
 {
 path_cmd = find_path();
@@ -44,5 +43,4 @@ free(path_cmd);
 }
 
 return (stat_s);
-}
- 
+} 

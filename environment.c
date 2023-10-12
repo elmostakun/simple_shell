@@ -9,16 +9,16 @@
 
 char *envir_get(char *check)
 {
-int idx, stringlen = _leng(check);
-char *val = NULL;
+	int idx, stringlen = _leng(check);
+	char *val = NULL;
 
-for (idx = 0; environ[idx]; idx++)
-{
-if (!cmp_str(environ[idx], check, stringlen) && environ[idx][stringlen] == '=')
-{
-val = environ[idx] + _leng(check) + 1;
-return (val);
-}
-}
-return (val);
+	for (idx = 0; environ[idx]; idx++)
+	{
+		if (!cmp_str(environ[idx], check, stringlen) && environ[idx][stringlen] == '=')
+		{
+			val = environ[idx] + _leng(check) + 1;
+			return (val);
+		}
+	}
+	return (val);
 }

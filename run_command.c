@@ -9,19 +9,20 @@
 int run_command(void)
 {
 char *path_cmd;
-pid_t xpid;
+pid_t bpid;
 int ex_stat;
 
 if (cmd[0] && builtin())
 {
 path_cmd = find_path();
+
 if (path_cmd)
 {
-xpid = fork();
-if (xpid == -1)
+bpid = fork();
+if (bpid == -1)
 return (0);
 
-else if (xpid == 0)
+else if (bpid == 0)
 {
 execve(path_cmd, cmd, environ);
 perror("execve");
@@ -29,7 +30,7 @@ exit(EXIT_FAILURE);
 }
 else
 {
-waitpid(xpid, &ex_stat, 0);
+waitpid(bpid, &ex_stat, 0);
 if (WIFEXITED(ex_stat))
 stat_s = WEXITSTATUS(ex_stat);
 }
@@ -43,4 +44,4 @@ free(path_cmd);
 }
 
 return (stat_s);
-} 
+}

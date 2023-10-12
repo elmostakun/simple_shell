@@ -19,9 +19,8 @@ char *find_path(void)
 
 	if (!_path_v)
 		return (NULL);
-
 	_path_d = conv_strarr(_path_v, ':');
-
+	/*printf("now com the path in find path\n");*/
 	for (ind = 0; _path_d[ind]; ind++)
 	{
 		_ab_path = malloc(1024);
@@ -37,6 +36,5 @@ char *find_path(void)
 		free(_ab_path);
 	}
 	freeArr(_path_d);
-
 	return (NULL);
 }

@@ -49,7 +49,7 @@ int f_fputint(int filedes, int numba)
 		l += f_fputchar(filedes, '0');
 		return (l);
 	}
-	if (numba == _MIN)
+	if (numba == _INT_MIN)
 	{
 		l += f_fputstr(filedes, "-2147483648");
 		return (l);

@@ -28,7 +28,7 @@ if (idx2 > 0)
 {
 bff[idx2] = '\0';
 array[idx1] = malloc(sizeof(char) * (idx2 + 1));
-_cpy(array[idx2], bff);
+_cpy(array[idx1], bff);
 idx1++;
 idx2 = 0;
 }

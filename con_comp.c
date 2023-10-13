@@ -42,14 +42,14 @@ return (array);
 }
 
 /**
- * cmp_str - compares 2 strings
+ * c_s - compares 2 strings
  * @string1: first string
  * @string2: second string compared on/with first string
  * @num: number of string to be compared
  * Return: 0 if equal, positive if s1 < s2, negative if s1 > s2
  */
 
-int cmp_str(const char *string1, const char *string2, size_t num)
+int c_s(const char *string1, const char *string2, size_t num)
 {
 size_t idx;
 

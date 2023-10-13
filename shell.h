@@ -34,9 +34,9 @@ int _compare(char *string1, char *string2);
 int _leng(char *string);
 void *call_loc(unsigned int numarr, unsigned int si_by);
 char *envir_get(char *check);
+int c_s(const char *string1, const char *string2, size_t num);
 int run_command(void);
 char **conv_strarr(char *string, char str_brk);
-int cmp_str(const char *string1, const char *string2, size_t num);
 
 /*Global variables used*/
 char **cmd;

@@ -11,7 +11,7 @@ int ind = 0;
 char *_path_v = envir_get("PATH");
 char **_path_d, *_ab_path;
 
-if (cmp_str(cmd[0], "./", 2) == 0 || cmd[0][0] == '/' || cmp_str(cmd[0], "../", 3))
+if (c_s(cmd[0], "./", 2) == 0 || cmd[0][0] == '/' || c_s(cmd[0], "../", 3))
 {
 if (access(cmd[0], F_OK) == 0)
 return (_dup(cmd[0]));

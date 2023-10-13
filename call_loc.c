@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * call_loc - memory get allocated to an array
- * @numarr: number of array elements
- * @si_by: size of bytes to be alloctated to each numarr elements
- * Return: a pointer to the allocated memory.
+ * call_loc - mem get allocated to arr
+ * @numarr: numbers of array
+ * @si_by: size  alloctated to each numarr
+ * Return: the allocated mem
  */
 
 void *call_loc(unsigned int numarr, unsigned int si_by)

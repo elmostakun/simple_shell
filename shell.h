@@ -46,7 +46,7 @@ char *first_cmd;
 int stat_s;
 extern char **environ;
 
-/* Preprocessors */
-#define _INT_MIN (1 << (sizeof(int) * 8 - 1))
+/* Preprocessors directives*/
+#define _MIN (1 << (sizeof(int) * 8 - 1))
 
 #endif /*SHELL_H*/

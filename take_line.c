@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * take_ln - have string from user and stores in a buffer
- * @ln: buffer for the string to be stored
+ * take_line - have string from user and stores in a buffer
+ * @ln: Buffer 4 d string 2 be stored
  *
- * Return: number of characters read, if errror returns -1;
+ * Return: Number of charactrs red, if errr retrns -1;
  */
 ssize_t take_line(char **ln)
 {

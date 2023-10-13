@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * run_command - function to run a command
+ * run_command - functn to run cmd
  *
- * Return: the status of the command
+ * Return: status of cmd
  */
 
 int run_command(void)

@@ -3,7 +3,7 @@
 /**
  * builtin - builtin cmd program
  *
- * Return: returns 0 on success
+ * Return: returns 0 if success
  */
 
 int builtin(void)

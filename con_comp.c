@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * conv_strarr - function to convert a string to an array
- * @string: the string to be converted to an array
- * @str_brk: variable string breaker
+ * conv_strarr - convt a string to an arr
+ * @string: str to be convrtd to arr
+ * @str_brk: str breaker
  *
- * Return: array of the tokenized string, else NULl if not converted
+ * Return: arr of tokenizd str, else NULl
  */
 
 char **conv_strarr(char *string, char str_brk)

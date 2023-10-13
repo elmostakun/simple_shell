@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * _cat - concatinates two strings
+ * _cat - Concatinats 2 strs
  * @path: Destination of the string to be appended
- * @stpth: String appended to path
- * Return: pointer
+ * @stpth: String appended 2 path
+ * Return: Pointer
  */
 char *_cat(char *path, char *stpth)
 {
@@ -23,8 +23,8 @@ return (path);
 
 
 /**
- * _cpy - copies the string
- * @path: destination of the copied string
+ * _cpy - Copies d str
+ * @path: Destintn of d copied str
  * @stpth: source of the string to be copied to <path>
  * Return: pointer
  */
@@ -41,8 +41,8 @@ return (path);
 
 
 /**
- * _dup - allocates memory for a string duplicate
- * @str: string
+ * _dup - alocats mem 4 a str duplicat
+ * @string: string
  * Return: memory
  */
 char *_dup(char *string)
@@ -76,7 +76,7 @@ return (pointer_mem);
  * _compare - compares the strings
  * @string1: string number ome
  * @string2: string number 2
- * Return: the condition of the string
+ * Return: d conditn of d string
  */
 int _compare(char *string1, char *string2)
 {
@@ -92,7 +92,7 @@ return (0);
 
 /**
  * _leng - returns the length of a string
- * @string count the length
+ * @string: count the length
  * Return: length.
  */
 
